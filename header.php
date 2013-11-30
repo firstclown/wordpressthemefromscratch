@@ -19,4 +19,11 @@
         </a>
       </h1>
       <h2><?php bloginfo('description') ?></h2>
+      <?php wp_nav_menu(
+        array(
+          'theme_location' => 'main',
+          'container' => 'nav',
+          'menu_class' => 'nav nav-pills'
+        )
+      ) ?>
     </header>
