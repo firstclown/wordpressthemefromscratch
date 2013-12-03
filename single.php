@@ -16,6 +16,7 @@
           <?php the_tags() ?>
         </section>
       </small>
+      <?php comments_template() ?>
     </article>
   <?php endwhile ?>
   <?php dynamic_sidebar('blog-sidebar') ?>
