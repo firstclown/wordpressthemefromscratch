@@ -13,3 +13,31 @@ function mytheme_menu_item_classes($classes){
   return $classes;
 }
 add_filter('nav_menu_css_class' , 'mytheme_menu_item_classes');
+
+function mytheme_widgets_init() {
+    register_sidebar( array(
+      'name'          => __('Footer Widget Area', 'mytheme'),
+      'id'            => 'footer',
+      'description'   =>
+        __('Appears in the footer section of the site. Limited to 900px.', 'mytheme'),
+    ) );
+    register_sidebar( array(
+      'name'          => __('Header Widget Area', 'mytheme'),
+      'id'            => 'header',
+      'description'   =>
+        __('Appears on the right side of the header. Limited to 300px.', 'mytheme'),
+    ) );
+    register_sidebar( array(
+      'name'          => __('Blog Sidebar Widget Area', 'mytheme'),
+      'id'            => 'blog-sidebar',
+      'description'   =>
+        __('Appears on blogs as a sidebar. Limited to 300px.', 'mytheme'),
+    ) );
+    register_sidebar( array(
+      'name'          => __('Page Sidebar Widget Area', 'mytheme'),
+      'id'            => 'page-sidebar',
+      'description'   =>
+        __('Appears on static pages as a sidebar. Limited to 300px.', 'mytheme'),
+    ) );
+}
+add_action( 'widgets_init', 'mytheme_widgets_init' );
