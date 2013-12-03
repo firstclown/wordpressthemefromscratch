@@ -19,6 +19,7 @@
         </a>
       </h1>
       <h2><?php bloginfo('description') ?></h2>
+      <?php dynamic_sidebar('header') ?>
       <?php wp_nav_menu(
         array(
           'theme_location' => 'main',

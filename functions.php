@@ -20,24 +20,40 @@ function mytheme_widgets_init() {
       'id'            => 'footer',
       'description'   =>
         __('Appears in the footer section of the site. Limited to 900px.', 'mytheme'),
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
       'name'          => __('Header Widget Area', 'mytheme'),
       'id'            => 'header',
       'description'   =>
         __('Appears on the right side of the header. Limited to 300px.', 'mytheme'),
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
       'name'          => __('Blog Sidebar Widget Area', 'mytheme'),
       'id'            => 'blog-sidebar',
       'description'   =>
         __('Appears on blogs as a sidebar. Limited to 300px.', 'mytheme'),
+      'before_widget' => '<aside id="%1$s" class="widget col-md-3 %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
       'name'          => __('Page Sidebar Widget Area', 'mytheme'),
       'id'            => 'page-sidebar',
       'description'   =>
         __('Appears on static pages as a sidebar. Limited to 300px.', 'mytheme'),
+      'before_widget' => '<aside id="%1$s" class="widget col-md-3 %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>',
     ) );
 }
 add_action( 'widgets_init', 'mytheme_widgets_init' );
