@@ -57,3 +57,16 @@ function mytheme_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'mytheme_widgets_init' );
+
+function mytheme_enqueue_scripts() {
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script(
+    'bootstrap',
+    get_template_directory_uri() . '/js/bootstrap-min.js',
+    array( 'jquery' ),
+    '3.1.1'
+  );
+  
+  wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_scripts' );

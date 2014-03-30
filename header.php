@@ -6,8 +6,6 @@
   <meta name="description" content="<?php bloginfo( 'description' ) ?>" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
   <title><?php bloginfo('name') ?> <?php wp_title() ?></title>
-  <link rel="stylesheet" type="text/css" 
-    href="<?php echo get_stylesheet_uri() ?>" media="all">
   <?php wp_head() ?>
 </head>
 <body <?php body_class() ?> >
